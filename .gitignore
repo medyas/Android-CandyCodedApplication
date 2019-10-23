@@ -36,3 +36,8 @@ local.properties
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+
+# Custom build files
+build.gradle
+app/build.gradle
