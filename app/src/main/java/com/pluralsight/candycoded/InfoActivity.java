@@ -39,10 +39,10 @@ public class InfoActivity extends AppCompatActivity {
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
-    /*
-    String phone = "+34666777888";
-Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-startActivity(intent);
-<uses-permission android:name="android.permission.CALL_PHONE" />
-    * */
+    public void createPhoneIntent(View view) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:0123456789"));
+        startActivity(intent);
+    }
+
 }
