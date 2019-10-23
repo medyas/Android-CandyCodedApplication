@@ -1,8 +1,10 @@
 package com.pluralsight.candycoded;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
@@ -26,8 +28,21 @@ public class InfoActivity extends AppCompatActivity {
     // ***
     // TODO - Task 2 - Launch the Google Maps Activity
     // ***
+    public void createMapIntent(View view) {
+        Intent mapIntent = new Intent(android.content.Intent.ACTION_VIEW,
+                Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801"));
+        mapIntent.setPackage("com.google.android.apps.maps");
+        if(mapIntent.resolveActivity(getPackageManager()) != null)
+            startActivity(mapIntent);
+    }
 
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
+    /*
+    String phone = "+34666777888";
+Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+startActivity(intent);
+<uses-permission android:name="android.permission.CALL_PHONE" />
+    * */
 }
