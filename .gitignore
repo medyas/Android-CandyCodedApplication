@@ -39,5 +39,5 @@ Thumbs.db
 
 
 # Custom build files
-build.gradle
-app/build.gradle
+./build.gradle
+./app/build.gradle
